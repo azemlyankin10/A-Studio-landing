@@ -1,1 +1,3 @@
-# A-Studio-landing
+## A-Studio-landing
+
+**npm i => npm run dev**

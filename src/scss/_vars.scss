@@ -1,0 +1,23 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+
+:root {
+  // base
+  --font-family: "Aver", sans-serif;
+  --logo-font: "Proxima", sans-serif;
+  --content-width: 1200px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+
+  // colors
+
+
+  //font
+  --title-fs: 40px;
+  --common-fs: 16px;
+  --common-fs-2: 18px;
+  --common-fs-3: 14px;
+
+}
+

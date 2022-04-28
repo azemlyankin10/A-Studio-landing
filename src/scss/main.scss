@@ -1,0 +1,131 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+//base style
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  @include mobile  {
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+}
+
+ul:not(.footer__social-list) a {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+  @media (hover:hover) {
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.container {
+  max-width: var(--container-width);
+  padding-left: var(--container-offset);
+  padding-right: var(--container-offset);
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 700;
+  font-size: var(--title-fs);
+  line-height: 49px;
+  color: #000000;
+
+  @include mobile {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+.btn {
+  position: relative;
+  background: #2639ED;
+  border-radius: 60px;
+  min-height: 66px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.065em;
+  color: #FFFFFF;
+  border: 0.5px solid #FFFFFF;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow: hidden;
+  z-index: 3;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #020b5c;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in-out;
+    z-index: -1;
+    border-radius: 60px;
+  }
+
+  &:focus {
+    transform: scale(1.1);
+  }
+
+  @media (hover:hover) {
+    &:hover {
+      &::before {
+        transform: translateX(0)
+      }
+    }
+  }
+}
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/clients";
+@import "./components/product";
+@import "./components/fids";
+@import "./components/form";
+@import "./components/footer";
+
+

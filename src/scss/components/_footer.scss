@@ -1,0 +1,128 @@
+.footer {
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
+    padding-top: 63px;
+    padding-bottom: 29px;
+    margin-bottom: 17px;
+
+    @include small-tablet {
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      padding-top: 30px;
+    }
+  }
+
+  &__left {
+    @include small-tablet {
+      flex-basis: 100%;
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // flex-wrap: wrap;
+    }
+  }
+
+  &__logo-container {
+    display: block;
+    margin-bottom: 26px;
+    font-size: 28px;
+    line-height: 33px;
+    color: #000000;
+
+  }
+  
+  &__logo-first-letter {
+    font-family: var(--logo-font);
+    font-weight: 700;
+  }
+
+  &__text {
+    max-width: 270px;
+    font-weight: 400;
+    font-size: var(--common-fs-3);
+    line-height: 160%;
+    color: #565656;
+    margin-bottom: 40px;
+
+    @include small-tablet {
+      flex-basis: 70%;
+      max-width: none;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+
+    // @include small-tablet {
+    //   flex-basis: 100%;
+    //   justify-content: center;
+    // }
+  }
+
+  &__social-element {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__social-link {
+  }
+
+  &__right {
+    flex-basis: 62%;
+    display: flex;
+    justify-content: space-between;
+
+    @include small-tablet {
+      flex-basis: 100%;
+      order: 1;
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__col {
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+  }
+
+  &__list {
+ 
+  }
+
+  &__list-element {
+
+  }
+
+  &__list-link {
+    font-weight: 400;
+    font-size: var(--common-fs-3);
+    line-height: 200%;
+    color: #000000;
+  }
+
+  &__copyrite {
+    text-align: center;
+    font-weight: 400;
+    font-size: var(--common-fs-3);
+    line-height: 160%;
+    color: #A4A4A4;
+  }
+}
+
